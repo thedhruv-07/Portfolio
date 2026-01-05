@@ -5,6 +5,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Download } from "lucide-react";
+import geminiImg from "../assets/projects/gemini.png";
 
 export default function App() {
   return (
@@ -125,11 +126,12 @@ export default function App() {
             github="#"
           />
           <Project
+            img={geminiImg}
             title="Gemini AI Clone"
             desc="Real-time AI chat app using Gemini API and async JavaScript."
             tech="HTML, CSS, JavaScript"
-            demo="#"
-            github="#"
+            demo="https://clone-kohl-rho.vercel.app/#"
+            github="https://github.com/thedhruv-07/clone"
           />
         </div>
       </section>
@@ -183,15 +185,17 @@ function Skill({ title, items }) {
   );
 }
 
-function Project({ title, desc, tech, demo, github }) {
+function Project({ img, title, desc, tech, demo, github }) {
   return (
     <motion.div
       whileHover={{ y: -6 }}
       className="bg-white/5 rounded-2xl p-6 border border-white/10"
     >
-      <div className="h-40 bg-gradient-to-br from-indigo-500/20 to-purple-500/20 rounded-xl mb-4 flex items-center justify-center text-gray-400 text-sm">
-        Project Preview
-      </div>
+      <img
+        src={img}
+        alt={title}
+        className="w-full h-48 object-cover rounded-xl mb-4"
+      />
       <h4 className="text-xl font-semibold mb-2">{title}</h4>
       <p className="text-gray-400 mb-3">{desc}</p>
       <p className="text-sm text-indigo-400 mb-4">{tech}</p>
