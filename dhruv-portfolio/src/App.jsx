@@ -5,7 +5,8 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Download } from "lucide-react";
-import geminiImg from "../assets/projects/gemini.png";
+import geminiImg from "./assets/projects/gemini.png";
+
 
 export default function App() {
   return (
